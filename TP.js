@@ -57,35 +57,34 @@ if(contraseña == 'secreto')
 /* 6: Múltiplo de 5*/
 function multiploONo(num)
 let numero = prompt('Ingresa un número cualquiera')
-if((numero == 'Termina en 5') || (numero == 'Termina en 0'))
+{if(numero % 5 == 0)
 {
-    alert('El número es múltiplo de 5')
+    return alert('El número es múltiplo de 5')
 }else{
-    alert('El número no es múltiplo de 5')
+    return alert('El número no es múltiplo de 5')
 }
-
+}
 /* 7: Cálculo de descuento*/
-function descuento(num)
+function descuento(edad, precio)
 let ingresarEdad = prompt('Ingresa tu edad')
-let ingresarPrecioCualquiera = prompt('Ingresar solo el precio de algo')
-let descuentoProducto = ingresarPrecioCualquiera * 10 / 100
-if(ingresarEdad >= 65)
+let ingresarPrecio = prompt('Ingresar solo el precio de algo')
+{ if(ingresarEdad > 65)
 {
-    alert('Tienes un decuento del 10% por ser mayor de 65 años, que es' + descuentoProducto)
+    return ingresarPrecio * 90 / 100
 }else{
-    alert('No tienes un descuento del 10%')
+    return ingresarPrecio
 }
-
+}
 /* 8: Categoría de notas*/
 function calificacionEnCategorias(num)
 let ingresarNotaNumerica = prompt('Ingresa el porcentaje numérico de una nota')
 if((ingresarNotaNumerica >= 80) && (ingresarNotaNumerica <= 100))
 {
-    alert('Es un MS (Muy Satisfactorio)')
-}if((ingresarNotaNumerica >= 60) && (ingresarNotaNumerica <= 79)){
-    alert('Es un S (Satisfactorio)')
+    return alert('Es un MS (Muy Satisfactorio)')
+} else if((ingresarNotaNumerica >= 60) && (ingresarNotaNumerica <= 79)){
+    return alert('Es un S (Satisfactorio)')
 }else{
-    alert('Es un EP (En Proceso)')
+    return alert('Es un EP (En Proceso)')
 }
 
 /* 9: Día de la semana*/
@@ -93,27 +92,29 @@ function diaDeLaSemana(texto)
 let numeroDeLaSemana = prompt('Ingresa un número del 1 al 7')
 if (numeroDeLaSemana == 1)
 {
-    alert('El día es Lunes')
-}if(numeroDeLaSemana == 2){
-    alert('Es el día Martes')
-}if(numeroDeLaSemana == 3){
-    alert('Es el día miércoles')
-}if(numeroDeLaSemana == 4){
-    alert('Es el día Jueves')
-}if(numeroDeLaSemana == 5){
-    alert('Es el día Viernes')
-}else{
-    alert('Es un día del fin de semana, sábado o domingo.')
+     return alert('El día es Lunes')
+} else if(numeroDeLaSemana == 2){
+    return alert('Es el día Martes')
+} else if(numeroDeLaSemana == 3){
+    return alert('Es el día miércoles')
+} else if(numeroDeLaSemana == 4){
+    return alert('Es el día Jueves')
+} else if(numeroDeLaSemana == 5){
+    return alert('Es el día Viernes')
+} else if(numeroDeLaSemana == 6){
+    return alert('Es el día Sábado')
+} else{
+    return alert('Es el día domingo')
 }
 
 /* 10: Año bisiesto o no*/
 function queAñoEs(num)
 let año = prompt('Ingresa un año')
-if((año / 400) || (año / 4))
+if((año / 400 == 0) || (año / 4 == 0) && (año / 100 != 0))
 {
-    alert('Es un año bisiesto')
+    return alert('Es un año bisiesto')
 }else{
-    alert('No es un año bisiesto')
+    return alert('No es un año bisiesto')
 }
 
 /* 11: Comprobar igualdad de cadenas*/
