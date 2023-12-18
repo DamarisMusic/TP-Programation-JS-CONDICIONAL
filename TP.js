@@ -35,13 +35,13 @@ if((edad >= 6) && (edad <= 11))
 }
 
 /* 4: Día laborable o fin de semana*/
-function queDiaEs(texto)
 let dia = prompt('Ingresa un día de la semana')
+function queDiaEs(texto)
 if((dia == 'Lunes') || (dia == 'Martes') || (dia == 'Miércoles') || (dia == 'Jueves') || (dia == 'Viernes'))
 {
-    alert('Es un día de semana laborable.')
+    return alert('Es un día de semana laborable.')
 }else{
-    alert('Es un día de fin de semana')
+    return alert('Es un día de fin de semana')
 }
 
 /* 5: Comprobar contraseña*/
